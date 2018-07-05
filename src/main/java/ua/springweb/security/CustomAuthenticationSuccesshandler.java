@@ -1,7 +1,5 @@
 package ua.springweb.security;
 
-import static org.hamcrest.CoreMatchers.is;
-
 import java.io.IOException;
 import java.util.Collection;
 
@@ -22,7 +20,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 public class CustomAuthenticationSuccesshandler implements AuthenticationSuccessHandler {
 
 	private final String ADMIN_PAGE = "/admin";
-	private final String USER_PAGE = "/profile";
+	private final String USER_PAGE = "/user";
 
 	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 

@@ -61,6 +61,11 @@ public class BaseController {
 	public String showAdmin() {
 		return "admin";
 	}
+	@GetMapping("/user")
+	@PreAuthorize("hasRole('ROLE_USER')")
+	public String showUser() {
+		return "user";
+	}
 	
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@GetMapping("/dashboard")
